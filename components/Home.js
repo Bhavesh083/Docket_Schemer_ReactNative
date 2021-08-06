@@ -34,17 +34,18 @@ function Home() {
     }]
 
     const [todos,setTodos] = useState(initialTodos);
+    const [modalVis,setModalVis] = useState(false);
+    const [todoInputValue,setTodoInputValue] = useState();
+    const [todoedit,setTodoedit] = useState(null);
+    
     const handleClearTodos = () =>{
         setTodos([]);
     }
-    const [modalVis,setModalVis] = useState(false);
-    const [todoInputValue,setTodoInputValue] = useState();
     const handleAddTodo = (todo)=>{
         const newTodos = [...todos,todo];
         setTodos(newTodos);
         setModalVis(false);
     }
-    const [todoedit,setTodoedit] = useState(null);
     const handleEdittrig=(item)=>{
         setTodoedit(item);
         setModalVis(true);
@@ -60,9 +61,9 @@ function Home() {
     }
     return (
         <>
-        <Header handleClearTodos={handleClearTodos} />
-        <ListItems handleEdittrig={handleEdittrig} todos={todos} setTodos={setTodos} />
-        <InputModal handleEdit={handleEdit} todos={todos} handleAddTodo={handleAddTodo} modalVis={modalVis} setModalVis={setModalVis} todoedit={todoedit} setTodoedit={setTodoedit} todoInputValue={todoInputValue} setTodoInputValue={setTodoInputValue} />
+          <Header handleClearTodos={handleClearTodos} />
+          <ListItems handleEdittrig={handleEdittrig} todos={todos} setTodos={setTodos} />
+          <InputModal handleEdit={handleEdit} todos={todos} handleAddTodo={handleAddTodo} modalVis={modalVis} setModalVis={setModalVis} todoedit={todoedit} setTodoedit={setTodoedit} todoInputValue={todoInputValue} setTodoInputValue={setTodoInputValue} />
         </>
     );
 }
