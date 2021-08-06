@@ -28,6 +28,7 @@ function InputModal({handleEdit, todoedit, setTodoedit, todos, handleAddTodo,mod
             setTodoInputValue("");
         }
     }
+    
     return (
         <>
           <ModalButton onPress={()=>{setModalVis(true)}} >
