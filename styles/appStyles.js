@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Constants from "expo-constants";
 
-// Colors
 export const colors = {
   primary: "#332424",
   secondary: "#112855",
@@ -10,7 +9,6 @@ export const colors = {
 };
 
 const statusBarHeight = Constants.statusBarHeight;
-
 
 export const Container = styled.SafeAreaView`
   background-color: #fff;
@@ -45,7 +43,6 @@ export const ABtext = styled.Text`
   padding-vertical:10px;
 `;
 
-// Header
 export const HeaderView = styled.View`
   padding-vertical: 10px;
   margin-bottom: 10px;
@@ -73,7 +70,6 @@ export const HeaderButton = styled.TouchableOpacity`
   justify-content:center;
 `;
 
-// List
 export const ListContainer = styled.View`
   margin-bottom: 30px;
   flex: 1;
@@ -127,7 +123,6 @@ export const SwipedTodoText = styled(TodoText)`
   text-decoration: line-through;
 `;
 
-// Modal
 export const ModalButton = styled.TouchableOpacity`
   width: 50px;
   height: 50px;
